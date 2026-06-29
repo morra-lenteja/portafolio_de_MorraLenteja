@@ -1,10 +1,210 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mi Portafolio</title><link rel="stylesheet" href="css/styles.css"></head><body>
-<section id="hero"><div class="hero-content"><h1>Tu Nombre</h1><h2>Diseñadora Gráfica</h2><p>Ilustración • Animación • Modelado 3D • Diseño</p><a href="#presentacion">Ver Portafolio</a></div></section>
-<section id="presentacion"><div class="foto"><img src="assets/perfil/foto.png" alt=""></div><div class="texto"><h2>Sobre mí</h2><p>Aquí colocarás tu presentación.</p></div></section>
-<section class="titulo"><h2>Áreas de Especialización</h2></section>
-<section class="software"><div class="info"><h2>IbisPaint X</h2><p>Descripción.</p></div><div class="galeria"><img src="assets/ibispaint/1.jpg"><img src="assets/ibispaint/2.jpg"><img src="assets/ibispaint/3.jpg"><img src="assets/ibispaint/4.jpg"></div></section>
-<section class="software"><div class="info"><h2>After Effects</h2><p>Descripción.</p></div><div class="galeria"><img src="assets/aftereffects/1.jpg"><img src="assets/aftereffects/2.jpg"><img src="assets/aftereffects/3.jpg"><img src="assets/aftereffects/4.jpg"></div></section>
-<section class="software"><div class="info"><h2>Blender</h2><p>Descripción.</p></div><div class="galeria"><img src="assets/blender/1.jpg"><img src="assets/blender/2.jpg"><img src="assets/blender/3.jpg"><img src="assets/blender/4.jpg"></div></section>
-<section class="software"><div class="info"><h2>Photoshop</h2><p>Descripción.</p></div><div class="galeria"><img src="assets/photoshop/1.jpg"><img src="assets/photoshop/2.jpg"><img src="assets/photoshop/3.jpg"><img src="assets/photoshop/4.jpg"></div></section>
-<section class="proyecto"><h2>Proyecto 1</h2><img src="assets/proyectos/proyecto1.jpg"><p>Descripción del proyecto.</p></section><section class="proyecto"><h2>Proyecto 2</h2><img src="assets/proyectos/proyecto2.jpg"><p>Descripción del proyecto.</p></section><section class="proyecto"><h2>Proyecto 3</h2><img src="assets/proyectos/proyecto3.jpg"><p>Descripción del proyecto.</p></section><footer><h2>Contacto</h2><p>correo@email.com</p></footer><script src="js/script.js"></script></body></html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MorraLenteja | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- BAT DECORATIONS -->
+  <div class="bat bat-1">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+  <div class="bat bat-2">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+  <div class="bat bat-3">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- SPIDER WEBS -->
+  <div class="web web-tl"><svg viewBox="0 0 200 200"><path d="M0,0 L200,0 M0,0 L0,200 M0,0 L180,40 M0,0 L140,90 M0,0 L90,140 M0,0 L40,180" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/><path d="M40,0 Q30,30 0,40 M90,0 Q70,70 0,90 M140,0 Q110,110 0,140" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.2"/></svg></div>
+  <div class="web web-tr"><svg viewBox="0 0 200 200"><path d="M200,0 L0,0 M200,0 L200,200 M200,0 L20,40 M200,0 L60,90 M200,0 L110,140 M200,0 L160,180" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/><path d="M160,0 Q170,30 200,40 M110,0 Q130,70 200,90 M60,0 Q90,110 200,140" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.2"/></svg></div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">ML</a>
+      <ul class="nav-links">
+        <li><a href="#presentacion">Sobre mí</a></li>
+        <li><a href="#especializacion">Especialización</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">MorraLenteja</h1>
+      <p class="hero-subtitle">Natalie Sayuri Ramos Palacios</p>
+      <p class="hero-tagline">Vtuber <span class="sep">•</span> Diseñadora Gráfica <span class="sep">•</span> Ilustradora <span class="sep">•</span> Animadora <span class="sep">•</span> Modelado 3D</p>
+      <a href="#presentacion" class="btn-gothic">Explorar Portafolio</a>
+    </div>
+    <div class="hero-chains">
+      <span class="chain-link">⛓️</span>
+      <span class="chain-link">⛓️</span>
+      <span class="chain-link">⛓️</span>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="presentacion" class="section-divider">
+    <div class="container">
+      <div class="presentacion-grid">
+        <div class="foto-wrapper">
+          <div class="foto-frame">
+            <img src="assets/perfil/foto.png" alt="MorraLenteja">
+          </div>
+        </div>
+        <div class="texto">
+          <h2 class="section-title">Sobre Mí</h2>
+          <div class="title-underline"></div>
+          <p>Soy una apasionada del arte digital y el modelado 3D. Como Vtuber, combino la ilustración, la animación y el diseño gráfico para crear contenido único. Amante de la estética gótica, los murciélagos y todo lo que brilla en la oscuridad.</p>
+          <p>Aquí encontrarás una muestra de mi trabajo a través de diferentes herramientas y proyectos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALIZACIÓN TITLE -->
+  <section id="especializacion" class="section-title-block">
+    <div class="container">
+      <h2 class="section-title">Áreas de Especialización</h2>
+      <div class="title-underline"></div>
+      <p class="section-desc">Herramientas y técnicas que domino para dar vida a las ideas</p>
+    </div>
+  </section>
+
+  <!-- IBISPAINT -->
+  <section class="software">
+    <div class="container software-grid">
+      <div class="info">
+        <div class="soft-icon"><i class="fas fa-paint-brush"></i></div>
+        <h2>IbisPaint X</h2>
+        <p>Ilustración digital con herramientas versátiles para crear personajes, fondos y concept art con un estilo único y detallado.</p>
+      </div>
+      <div class="galeria">
+        <img src="assets/ibispaint/1.jpg" alt="IbisPaint 1">
+        <img src="assets/ibispaint/2.jpg" alt="IbisPaint 2">
+        <img src="assets/ibispaint/3.jpg" alt="IbisPaint 3">
+        <img src="assets/ibispaint/4.jpg" alt="IbisPaint 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTER EFFECTS -->
+  <section class="software">
+    <div class="container software-grid">
+      <div class="info">
+        <div class="soft-icon"><i class="fas fa-film"></i></div>
+        <h2>After Effects</h2>
+        <p>Animación y motion graphics para dar movimiento a ilustraciones, crear intros dinámicas y efectos visuales impactantes.</p>
+      </div>
+      <div class="galeria">
+        <img src="assets/aftereffects/1.jpg" alt="After Effects 1">
+        <img src="assets/aftereffects/2.jpg" alt="After Effects 2">
+        <img src="assets/aftereffects/3.jpg" alt="After Effects 3">
+        <img src="assets/aftereffects/4.jpg" alt="After Effects 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- BLENDER -->
+  <section class="software">
+    <div class="container software-grid">
+      <div class="info">
+        <div class="soft-icon"><i class="fas fa-cube"></i></div>
+        <h2>Blender</h2>
+        <p>Modelado 3D, escultura digital y renderizado para crear personajes, escenarios y props con alto nivel de detalle.</p>
+      </div>
+      <div class="galeria">
+        <img src="assets/blender/1.jpg" alt="Blender 1">
+        <img src="assets/blender/2.jpg" alt="Blender 2">
+        <img src="assets/blender/3.jpg" alt="Blender 3">
+        <img src="assets/blender/4.jpg" alt="Blender 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOSHOP -->
+  <section class="software">
+    <div class="container software-grid">
+      <div class="info">
+        <div class="soft-icon"><i class="fas fa-image"></i></div>
+        <h2>Photoshop</h2>
+        <p>Edición y retoque de imágenes, composición digital y diseño gráfico para proyectos profesionales y artísticos.</p>
+      </div>
+      <div class="galeria">
+        <img src="assets/photoshop/1.jpg" alt="Photoshop 1">
+        <img src="assets/photoshop/2.jpg" alt="Photoshop 2">
+        <img src="assets/photoshop/3.jpg" alt="Photoshop 3">
+        <img src="assets/photoshop/4.jpg" alt="Photoshop 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section-title-block">
+    <div class="container">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="title-underline"></div>
+    </div>
+  </section>
+
+  <div class="proyectos-grid">
+    <section class="proyecto">
+      <div class="proyecto-img">
+        <img src="assets/proyectos/proyecto1.jpg" alt="Proyecto 1">
+      </div>
+      <h2>Proyecto 1</h2>
+      <p>Descripción del proyecto.</p>
+    </section>
+    <section class="proyecto">
+      <div class="proyecto-img">
+        <img src="assets/proyectos/proyecto2.jpg" alt="Proyecto 2">
+      </div>
+      <h2>Proyecto 2</h2>
+      <p>Descripción del proyecto.</p>
+    </section>
+    <section class="proyecto">
+      <div class="proyecto-img">
+        <img src="assets/proyectos/proyecto3.jpg" alt="Proyecto 3">
+      </div>
+      <h2>Proyecto 3</h2>
+      <p>Descripción del proyecto.</p>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-bats">
+        <span>🦇</span>
+        <span>🦇</span>
+        <span>🦇</span>
+      </div>
+      <h2>Contacto</h2>
+      <div class="title-underline"></div>
+      <p class="footer-email"><i class="fas fa-envelope"></i> correo@email.com</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 MorraLenteja — Hecho con 🦇 y mucho café</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
