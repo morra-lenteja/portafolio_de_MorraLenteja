@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observeSections = () => {
     const sections = document.querySelectorAll(
-      '#presentacion, .software, .gallery-block, #especializacion, #proyectos, footer'
+      '.full-bleed-section, .software, #especializacion, footer'
     );
     sections.forEach(section => {
       section.classList.add('fade-in');
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===== GALLERY IMAGE LIGHTBOX =====
-  const galeriaImgs = document.querySelectorAll('.galeria img, .gallery-masonry img');
+  const galeriaImgs = document.querySelectorAll('.works-grid img');
   galeriaImgs.forEach(img => {
     img.addEventListener('click', () => {
       const overlay = document.createElement('div');
