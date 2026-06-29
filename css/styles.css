@@ -387,32 +387,65 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
-.soft-icon {
-  font-size: 2.2rem;
-  color: var(--pink);
-  margin-bottom: 15px;
-  text-shadow: 0 0 20px var(--border-glow);
+.soft-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(233, 30, 140, 0.3));
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.soft-logo:hover {
+  filter: drop-shadow(0 0 40px rgba(233, 30, 140, 0.6));
+  transform: scale(1.05);
 }
 
-.galeria {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
   width: 70%;
 }
-.galeria img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid rgba(123, 63, 160, 0.2);
+
+.skill-item {
+  background: rgba(123, 63, 160, 0.08);
+  border: 1px solid rgba(123, 63, 160, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
   transition: all 0.4s ease;
-  cursor: pointer;
 }
-.galeria img:hover {
-  transform: scale(1.03);
+.skill-item:hover {
   border-color: var(--purple);
   box-shadow: 0 0 25px var(--shadow-purple);
+  transform: translateY(-3px);
+  background: rgba(123, 63, 160, 0.15);
+}
+
+.skill-item h3 {
+  font-family: var(--font-subheading);
+  font-size: 1rem;
+  color: var(--purple-light);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.skill-item ul {
+  list-style: none;
+  padding: 0;
+}
+.skill-item ul li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 3px 0;
+  position: relative;
+}
+.skill-item ul li::before {
+  content: '🦇';
+  font-size: 0.6rem;
+  margin-right: 6px;
+  opacity: 0.5;
 }
 
 /* ===== PROYECTOS ===== */
@@ -564,7 +597,7 @@ footer .title-underline { margin: 15px auto 25px; }
 
   .software-grid { flex-direction: column; }
   .info { width: 100%; text-align: center; }
-  .galeria { width: 100%; }
+  .skills-grid { width: 100%; }
   .section-title { font-size: 1.8rem; }
   .proyectos-grid { grid-template-columns: 1fr; padding: 40px 20px 60px; }
   .foto-frame { width: 200px; height: 200px; }
