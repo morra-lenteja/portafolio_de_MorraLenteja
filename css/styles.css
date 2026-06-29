@@ -347,13 +347,12 @@ a { text-decoration: none; color: inherit; }
   position: absolute;
   inset: 0;
   overflow: hidden;
-  border-right: 3px solid rgba(123, 63, 160, 0.3);
 }
 .foto-frame::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 60%, var(--purple-dark) 100%);
+  background: linear-gradient(90deg, transparent 50%, var(--purple-dark) 100%);
   pointer-events: none;
 }
 .foto-frame img {
