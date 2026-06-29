@@ -282,8 +282,8 @@ a { text-decoration: none; color: inherit; }
 .emotes-track {
   display: flex;
   gap: 50px;
-  width: fit-content;
-  animation: scrollEmotes 25s linear infinite;
+  flex-wrap: nowrap;
+  animation: scrollEmotes 45s linear infinite;
 }
 
 .emotes-track img {
@@ -302,7 +302,7 @@ a { text-decoration: none; color: inherit; }
 
 @keyframes scrollEmotes {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-25%); }
 }
 
 /* ===== SECTION DIVIDER ===== */
