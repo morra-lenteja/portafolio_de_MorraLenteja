@@ -270,6 +270,41 @@ a { text-decoration: none; color: inherit; }
   50% { transform: translateX(-50%) rotate(3deg); }
 }
 
+/* ===== EMOTES CARRUSEL ===== */
+.emotes-carousel {
+  overflow: hidden;
+  padding: 50px 0;
+  background: var(--dark);
+  border-top: 1px solid rgba(123, 63, 160, 0.1);
+  border-bottom: 1px solid rgba(123, 63, 160, 0.1);
+}
+
+.emotes-track {
+  display: flex;
+  gap: 50px;
+  width: fit-content;
+  animation: scrollEmotes 25s linear infinite;
+}
+
+.emotes-track img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(233, 30, 140, 0.2));
+}
+
+.emotes-track img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 20px rgba(233, 30, 140, 0.5));
+}
+
+@keyframes scrollEmotes {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== SECTION DIVIDER ===== */
 .section-divider {
   position: relative;
