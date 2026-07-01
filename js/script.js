@@ -64,10 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('click', () => {
       const overlay = document.createElement('div');
       overlay.className = 'lightbox-overlay';
+      const caption = img.getAttribute('data-caption') || '';
       overlay.innerHTML = `
         <div class="lightbox-content">
           <span class="lightbox-close">&times;</span>
           <img src="${img.src}" alt="${img.alt || ''}">
+          ${caption ? `<p class="lightbox-caption">${caption}</p>` : ''}
         </div>
       `;
       document.body.appendChild(overlay);

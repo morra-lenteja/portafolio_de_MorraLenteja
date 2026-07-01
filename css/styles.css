@@ -656,3 +656,17 @@ footer .title-underline { margin: 15px auto 25px; }
   line-height: 1;
 }
 .lightbox-close:hover { color: var(--pink); }
+
+.lightbox-caption {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--purple-lavender);
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: rgba(10, 5, 16, 0.85);
+  border-radius: 8px;
+  border: 1px solid rgba(123, 63, 160, 0.2);
+  max-width: 100%;
+  line-height: 1.5;
+}
