@@ -1,9 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ===== NAVBAR SCROLL =====
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 100);
+  // ===== NAV TOGGLE =====
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('open');
+      navMenu.classList.remove('open');
+    });
   });
 
   // ===== SCROLL ANIMATIONS (Intersection Observer) =====
@@ -32,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   observeSections();
 
   // ===== NAV LINKS SMOOTH SCROLL =====
-  document.querySelectorAll('.nav-links a, .btn-gothic').forEach(link => {
+  document.querySelectorAll('.nav-menu a, .btn-gothic').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (href && href.startsWith('#')) {

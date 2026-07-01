@@ -29,14 +29,18 @@
 
   <!-- NAV -->
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">ML</a>
-      <ul class="nav-links">
-        <li><a href="#presentacion">Sobre mí</a></li>
-        <li><a href="#especializacion">Especialización</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span class="nav-toggle-text">ML</span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="#presentacion">Sobre mí</a></li>
+      <li><a href="#especializacion">Especialización</a></li>
+      <li><a href="#ibispaint">IbisPaint X</a></li>
+      <li><a href="#aftereffects">After Effects</a></li>
+      <li><a href="#blender">Blender</a></li>
+      <li><a href="#photoshop">Photoshop</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
   </nav>
 
   <!-- HERO -->
@@ -94,7 +98,7 @@
   </section>
 
   <!-- ESPECIALIZACIÓN TITLE -->
-  <section id="especializacion" class="section-title-block">
+  <section id="especializacion" class="section-title-block" style="scroll-margin-top: 100px;">
     <div class="container">
       <h2 class="section-title">Áreas de Especialización</h2>
       <div class="title-underline"></div>
@@ -103,7 +107,7 @@
   </section>
 
   <!-- IBISPAINT X -->
-  <section class="software">
+  <section id="ibispaint" class="software">
     <div class="container">
       <div class="software-header">
         <img src="assets/logos/ibispaint.png" alt="IbisPaint X" class="soft-logo">
@@ -138,7 +142,7 @@
   </section>
 
   <!-- AFTER EFFECTS -->
-  <section class="software">
+  <section id="aftereffects" class="software">
     <div class="container">
       <div class="software-header">
         <img src="assets/logos/aftereffects.png" alt="After Effects" class="soft-logo">
@@ -171,7 +175,7 @@
   </section>
 
   <!-- BLENDER -->
-  <section class="software">
+  <section id="blender" class="software">
     <div class="container">
       <div class="software-header">
         <img src="assets/logos/blender.png" alt="Blender" class="soft-logo">
@@ -204,7 +208,7 @@
   </section>
 
   <!-- PHOTOSHOP -->
-  <section class="software">
+  <section id="photoshop" class="software">
     <div class="container">
       <div class="software-header">
         <img src="assets/logos/photoshop.png" alt="Photoshop" class="soft-logo">
