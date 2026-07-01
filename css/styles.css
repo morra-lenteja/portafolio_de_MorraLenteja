@@ -333,7 +333,7 @@ a { text-decoration: none; color: inherit; }
   width: 50vw;
   flex-shrink: 0;
   background-size: cover;
-  background-position: 15% center;
+  background-position: 20% center;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -341,7 +341,7 @@ a { text-decoration: none; color: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 50%, var(--purple-dark) 100%);
+  background: linear-gradient(90deg, transparent 35%, var(--purple-dark) 100%);
   pointer-events: none;
 }
 
