@@ -130,7 +130,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-links a {
   font-family: var(--font-subheading);
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -226,7 +226,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-block;
   padding: 16px 45px;
   font-family: var(--font-subheading);
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--text-light);
@@ -452,7 +452,7 @@ a { text-decoration: none; color: inherit; }
 
 .skill-tag {
   font-family: var(--font-subheading);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--purple-lavender);
   background: rgba(123, 63, 160, 0.12);
   border: 1px solid rgba(123, 63, 160, 0.25);
@@ -596,7 +596,7 @@ footer .title-underline { margin: 15px auto 25px; }
 }
 
 .footer-copy {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--purple-mid);
   opacity: 0.6;
 }
@@ -630,7 +630,7 @@ footer .title-underline { margin: 15px auto 25px; }
   .hero-tagline { font-size: 0.95rem; }
 
   .nav-links { gap: 18px; }
-  .nav-links a { font-size: 0.75rem; letter-spacing: 1px; }
+  .nav-links a { font-size: 0.85rem; letter-spacing: 1px; }
 
   .section-title { font-size: 1.8rem; }
   .works-grid { grid-template-columns: 1fr; }
@@ -641,7 +641,7 @@ footer .title-underline { margin: 15px auto 25px; }
 @media (max-width: 480px) {
   .hero-title { font-size: 2rem; }
   .nav-links { gap: 12px; }
-  .nav-links a { font-size: 0.65rem; letter-spacing: 0.5px; }
+  .nav-links a { font-size: 0.75rem; letter-spacing: 0.5px; }
 }
 
 /* ===== LIGHTBOX ===== */
