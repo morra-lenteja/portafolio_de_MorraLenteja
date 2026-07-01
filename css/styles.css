@@ -523,6 +523,7 @@ a { text-decoration: none; color: inherit; }
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 10px;
+  pointer-events: none;
 }
 
 .work-item:hover .work-tag {
