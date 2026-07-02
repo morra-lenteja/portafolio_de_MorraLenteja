@@ -762,7 +762,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== PARTICLES ===== */
 .particles {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
@@ -791,10 +791,10 @@ a { text-decoration: none; color: inherit; }
 .particles span:nth-child(10) { left: 90%; animation-delay: 7s; width: 5px; height: 5px; }
 
 @keyframes particleFloat {
-  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  0% { transform: translateY(100%) scale(0); opacity: 0; }
   10% { opacity: 0.4; }
   90% { opacity: 0.4; }
-  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+  100% { transform: translateY(-100%) scale(1); opacity: 0; }
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -806,14 +806,14 @@ a { text-decoration: none; color: inherit; }
   background: linear-gradient(135deg, var(--darker) 0%, var(--purple-dark) 40%, var(--purple-deep) 70%, var(--darker) 100%);
   padding: 120px 20px 80px;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .contact-page-container {
   max-width: 960px;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .contact-page-header {
