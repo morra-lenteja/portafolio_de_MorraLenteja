@@ -878,6 +878,22 @@ a { text-decoration: none; color: inherit; }
 .ornament-svg {
   width: 100%;
   height: auto;
+  animation: ornamentRotate 60s linear infinite;
+}
+
+.ornament-arrow {
+  animation: arrowPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes ornamentRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes arrowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
 }
 
 .context-phrase {
@@ -914,14 +930,14 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   color: var(--text-muted);
   font-size: 1.1rem;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .context-socials-icons a:hover {
   border-color: var(--pink);
   color: var(--pink);
-  box-shadow: 0 0 20px var(--border-glow);
-  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--border-glow), 0 6px 20px rgba(233, 30, 140, 0.15);
+  transform: translateY(-4px);
 }
 
 .context-email {
@@ -997,6 +1013,12 @@ a { text-decoration: none; color: inherit; }
   color: var(--pink);
   font-size: 0.75rem;
   opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.form-group:focus-within .form-label i {
+  color: var(--pink-glow);
+  opacity: 1;
 }
 
 .form-input,
@@ -1021,14 +1043,36 @@ a { text-decoration: none; color: inherit; }
 
 .form-input:focus,
 .form-textarea:focus {
-  border-color: var(--purple-light);
-  box-shadow: 0 0 18px rgba(155, 100, 200, 0.2), 0 0 40px rgba(233, 30, 140, 0.08);
+  border-color: var(--purple);
+  box-shadow: 0 0 20px rgba(123, 63, 160, 0.25), 0 0 45px rgba(233, 30, 140, 0.1);
   background: rgba(123, 63, 160, 0.1);
 }
 
 .form-textarea {
   resize: vertical;
   min-height: 130px;
+}
+
+.form-error {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--pink-light);
+  display: block;
+  margin-top: 5px;
+  min-height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-error.visible {
+  opacity: 1;
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: var(--pink-light);
+  box-shadow: 0 0 15px rgba(233, 30, 140, 0.12);
 }
 
 /* WAX SEAL BUTTON */
@@ -1053,12 +1097,34 @@ a { text-decoration: none; color: inherit; }
 .btn-wax::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -2px;
   background: linear-gradient(135deg, var(--purple), var(--pink));
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
   border-radius: 30px;
+}
+
+.btn-wax-shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.25) 45%, transparent 60%);
+  background-size: 250% 100%;
+  animation: shimmerSlide 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.btn-wax:hover .btn-wax-shimmer {
+  opacity: 1;
+}
+
+@keyframes shimmerSlide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .btn-wax::after {
@@ -1086,8 +1152,20 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-wax:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
+  transition-duration: 0.1s;
   box-shadow: 0 0 50px rgba(233, 30, 140, 0.4);
+}
+
+.btn-wax.btn-sealed {
+  animation: sealStamp 0.4s ease;
+}
+
+@keyframes sealStamp {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.95); }
+  60% { transform: scale(1.02); }
+  100% { transform: scale(1); }
 }
 
 /* RESPONSIVE CONTACT */

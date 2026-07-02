@@ -174,4 +174,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== CONTACT FORM VALIDATION =====
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    const requiredInputs = contactForm.querySelectorAll('input[required], textarea[required]');
+
+    const errorMessages = {
+      name: 'Cuéntame tu nombre para poder dirigirme a ti',
+      email: 'Necesito un correo para responderte',
+      message: 'Escribe un mensaje para que pueda ayudarte',
+    };
+
+    requiredInputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        const errorSpan = contactForm.querySelector(`.form-error[data-for="${input.id}"]`);
+        if (!errorSpan) return;
+        if (!input.value.trim()) {
+          errorSpan.textContent = errorMessages[input.id] || 'Este campo es obligatorio';
+          errorSpan.classList.add('visible');
+          input.classList.add('error');
+        } else {
+          errorSpan.textContent = '';
+          errorSpan.classList.remove('visible');
+          input.classList.remove('error');
+        }
+      });
+
+      input.addEventListener('input', () => {
+        const errorSpan = contactForm.querySelector(`.form-error[data-for="${input.id}"]`);
+        if (!errorSpan) return;
+        if (input.value.trim()) {
+          errorSpan.textContent = '';
+          errorSpan.classList.remove('visible');
+          input.classList.remove('error');
+        }
+      });
+    });
+
+    const submitBtn = contactForm.querySelector('.btn-wax');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let hasError = false;
+
+      requiredInputs.forEach(input => {
+        const errorSpan = contactForm.querySelector(`.form-error[data-for="${input.id}"]`);
+        if (!errorSpan) return;
+        if (!input.value.trim()) {
+          errorSpan.textContent = errorMessages[input.id] || 'Este campo es obligatorio';
+          errorSpan.classList.add('visible');
+          input.classList.add('error');
+          hasError = true;
+        }
+      });
+
+      if (!hasError) {
+        submitBtn.classList.add('btn-sealed');
+        submitBtn.textContent = '¡Mensaje Enviado!';
+        setTimeout(() => {
+          submitBtn.classList.remove('btn-sealed');
+          submitBtn.innerHTML = '<span class="btn-wax-shimmer"></span>Enviar Mensaje';
+        }, 2500);
+      }
+    });
+  }
+
 });
