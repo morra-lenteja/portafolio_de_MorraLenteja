@@ -68,17 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== GALLERY IMAGE LIGHTBOX =====
-  const galeriaImgs = document.querySelectorAll('.works-grid img');
-  galeriaImgs.forEach(img => {
-    img.addEventListener('click', () => {
+  // ===== GALLERY LIGHTBOX =====
+  const galeriaItems = document.querySelectorAll('.works-grid img, .works-grid video');
+  galeriaItems.forEach(item => {
+    item.addEventListener('click', () => {
       const overlay = document.createElement('div');
       overlay.className = 'lightbox-overlay';
-      const caption = img.getAttribute('data-caption') || '';
+      const caption = item.getAttribute('data-caption') || '';
+      const isVideo = item.tagName === 'VIDEO';
+      const src = isVideo ? item.querySelector('source')?.src || item.src : item.src;
+      const mediaTag = isVideo
+        ? `<video src="${src}" controls autoplay class="lightbox-video"></video>`
+        : `<img src="${item.src}" alt="${item.alt || ''}">`;
       overlay.innerHTML = `
         <div class="lightbox-content">
           <span class="lightbox-close">&times;</span>
-          <img src="${img.src}" alt="${img.alt || ''}">
+          ${mediaTag}
           ${caption ? `<p class="lightbox-caption">${caption}</p>` : ''}
         </div>
       `;
