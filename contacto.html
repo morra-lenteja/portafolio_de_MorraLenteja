@@ -12,6 +12,11 @@
 </head>
 <body>
 
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <!-- BAT DECORATIONS -->
   <div class="bat bat-1">
     <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
@@ -40,33 +45,89 @@
     </ul>
   </nav>
 
-  <!-- CONTACT FORM -->
+  <!-- CONTACT SECTION -->
   <section class="contact-page-section">
     <div class="contact-page-container">
+
+      <!-- TITLE -->
       <div class="contact-page-header">
         <h1 class="contact-page-title">Contáctame</h1>
-        <div class="title-underline"></div>
-        <p class="contact-page-desc">¿Tienes un proyecto en mente? Estoy lista para hacerlo realidad.</p>
+        <div class="contact-divider">
+          <svg viewBox="0 0 200 12" class="divider-svg"><path d="M0,6 Q25,0 50,6 Q75,12 100,6 Q125,0 150,6 Q175,12 200,6" stroke="url(#dividerGrad)" stroke-width="1.5" fill="none"/><defs><linearGradient id="dividerGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="var(--purple)"/><stop offset="50%" stop-color="var(--pink)"/><stop offset="100%" stop-color="var(--purple)"/></linearGradient></defs></svg>
+        </div>
+        <p class="contact-page-desc">Cada proyecto comienza con una conversación.</p>
       </div>
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+
+      <!-- TWO COLUMN LAYOUT -->
+      <div class="contact-columns">
+
+        <!-- LEFT: CONTEXT -->
+        <div class="contact-context">
+          <div class="context-ornament">
+            <svg viewBox="0 0 180 220" class="ornament-svg">
+              <path d="M90,10 Q95,5 100,10 L110,30 Q135,25 145,40 L150,60 Q165,65 170,80 L170,100 Q175,105 170,110 L170,130 Q165,145 150,150 L130,160 Q135,175 125,185 L100,200 Q95,210 90,210 Q85,210 80,200 L55,185 Q45,175 50,160 L30,150 Q15,145 10,130 L10,110 Q5,105 10,100 L10,80 Q15,65 30,60 L35,40 Q45,25 70,30 Z" fill="none" stroke="var(--purple-mid)" stroke-width="1.2" opacity="0.4"/>
+              <path d="M90,40 L90,180 M40,90 L140,90" stroke="var(--purple-mid)" stroke-width="0.8" opacity="0.2"/>
+              <circle cx="90" cy="90" r="25" fill="none" stroke="var(--purple-light)" stroke-width="0.8" opacity="0.3"/>
+              <circle cx="90" cy="90" r="15" fill="none" stroke="var(--pink)" stroke-width="0.6" opacity="0.2"/>
+              <path d="M78,85 L90,97 L102,85" fill="none" stroke="var(--purple-light)" stroke-width="1" opacity="0.4"/>
+            </svg>
+          </div>
+
+          <p class="context-phrase">"Diseñar no es solo hacer que algo se vea bien, es hacer que conecte con quien lo ve."</p>
+
+          <div class="context-socials">
+            <p class="context-socials-label">Encuéntrame en</p>
+            <div class="context-socials-icons">
+              <a href="https://x.com/morralenteja" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://youtube.com/@morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.tiktok.com/@morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="context-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:morra.lenteja@gmail.com">morra.lenteja@gmail.com</a>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="tu@correo.com" required>
+
+        <!-- RIGHT: FORM -->
+        <div class="contact-form-wrapper">
+          <div class="form-corner corner-tl">
+            <svg viewBox="0 0 40 40"><path d="M2,2 L38,2 M2,2 L2,38" stroke="var(--purple-light)" stroke-width="0.8" fill="none" opacity="0.4"/><path d="M2,2 Q20,8 38,2" stroke="var(--pink)" stroke-width="0.6" fill="none" opacity="0.3"/></svg>
+          </div>
+          <div class="form-corner corner-tr">
+            <svg viewBox="0 0 40 40"><path d="M38,2 L2,2 M38,2 L38,38" stroke="var(--purple-light)" stroke-width="0.8" fill="none" opacity="0.4"/><path d="M38,2 Q20,8 2,2" stroke="var(--pink)" stroke-width="0.6" fill="none" opacity="0.3"/></svg>
+          </div>
+          <div class="form-corner corner-bl">
+            <svg viewBox="0 0 40 40"><path d="M2,38 L38,38 M2,38 L2,2" stroke="var(--purple-light)" stroke-width="0.8" fill="none" opacity="0.4"/><path d="M2,38 Q20,32 38,38" stroke="var(--pink)" stroke-width="0.6" fill="none" opacity="0.3"/></svg>
+          </div>
+          <div class="form-corner corner-br">
+            <svg viewBox="0 0 40 40"><path d="M38,38 L2,38 M38,38 L38,2" stroke="var(--purple-light)" stroke-width="0.8" fill="none" opacity="0.4"/><path d="M38,38 Q20,32 2,38" stroke="var(--pink)" stroke-width="0.6" fill="none" opacity="0.3"/></svg>
+          </div>
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label"><i class="fas fa-feather-alt"></i> Nombre</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label"><i class="fas fa-envelope"></i> Correo electrónico</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="tu@correo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label"><i class="fas fa-tag"></i> Asunto</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="¿De qué se trata?">
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label"><i class="fas fa-scroll"></i> Mensaje</label>
+              <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            </div>
+            <button type="submit" class="btn-wax">Enviar Mensaje</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="subject" class="form-label">Asunto</label>
-          <input type="text" id="subject" name="subject" class="form-input" placeholder="¿De qué se trata?">
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Mensaje</label>
-          <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-        </div>
-        <button type="submit" class="btn-gothic btn-submit">Enviar Mensaje</button>
-      </form>
+
+      </div>
     </div>
   </section>
 
