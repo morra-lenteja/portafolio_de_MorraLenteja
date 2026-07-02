@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | MorraLenteja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- BAT DECORATIONS -->
+  <div class="bat bat-1">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+  <div class="bat bat-2">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+  <div class="bat bat-3">
+    <svg viewBox="0 0 100 60"><path d="M50,38 Q55,28 65,20 Q60,30 55,36 Q65,28 75,22 Q70,32 65,38 Q75,32 85,30 Q80,38 70,42 Q60,45 50,40 Q40,45 30,42 Q20,38 15,30 Q25,32 35,38 Q30,32 25,22 Q35,28 45,36 Q40,30 35,20 Q45,28 50,38Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- SPIDER WEBS -->
+  <div class="web web-tl"><svg viewBox="0 0 200 200"><path d="M0,0 L200,0 M0,0 L0,200 M0,0 L180,40 M0,0 L140,90 M0,0 L90,140 M0,0 L40,180" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/><path d="M40,0 Q30,30 0,40 M90,0 Q70,70 0,90 M140,0 Q110,110 0,140" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.2"/></svg></div>
+  <div class="web web-tr"><svg viewBox="0 0 200 200"><path d="M200,0 L0,0 M200,0 L200,200 M200,0 L20,40 M200,0 L60,90 M200,0 L110,140 M200,0 L160,180" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/><path d="M160,0 Q170,30 200,40 M110,0 Q130,70 200,90 M60,0 Q90,110 200,140" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.2"/></svg></div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span class="nav-toggle-text">ML</span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#presentacion">Sobre mí</a></li>
+      <li><a href="index.html#especializacion">Especialización</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-page-section">
+    <div class="contact-page-container">
+      <div class="contact-page-header">
+        <h1 class="contact-page-title">Contáctame</h1>
+        <div class="title-underline"></div>
+        <p class="contact-page-desc">¿Tienes un proyecto en mente? Estoy lista para hacerlo realidad.</p>
+      </div>
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="tu@correo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Asunto</label>
+          <input type="text" id="subject" name="subject" class="form-input" placeholder="¿De qué se trata?">
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="btn-gothic btn-submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bats">
+        <span>🦇</span>
+        <span>🦇</span>
+        <span>🦇</span>
+      </div>
+      <h2>Contacto</h2>
+      <div class="title-underline"></div>
+      <p class="footer-email"><i class="fas fa-envelope"></i> <a href="mailto:morra.lenteja@gmail.com">morra.lenteja@gmail.com</a></p>
+      <div class="footer-socials">
+        <a href="https://x.com/morralenteja" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@morra_lenteja" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 MorraLenteja — Hecho con 🦇 y mucho café</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
