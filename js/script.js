@@ -99,4 +99,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== FOLDER CAROUSEL (PHOTOSHOP) =====
+  const folderItems = document.querySelectorAll('.folder-item');
+
+  function openCarousel(images, startIndex) {
+    let currentIndex = startIndex;
+    const total = images.length;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'carousel-overlay';
+
+    function render() {
+      const img = images[currentIndex];
+      const caption = img.getAttribute('data-caption') || '';
+      overlay.innerHTML = `
+        <div class="carousel-container">
+          <div class="carousel-header">
+            <span class="carousel-counter">${currentIndex + 1} / ${total}</span>
+            <span class="carousel-close">&times;</span>
+          </div>
+          <div class="carousel-image-wrapper">
+            <button class="carousel-nav carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <img src="${img.src}" alt="${img.alt || ''}">
+            <button class="carousel-nav carousel-next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          ${caption ? `<p class="carousel-caption">${caption}</p>` : ''}
+        </div>
+      `;
+
+      overlay.querySelector('.carousel-close').addEventListener('click', close);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+      });
+      overlay.querySelector('.carousel-prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + total) % total;
+        render();
+      });
+      overlay.querySelector('.carousel-next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % total;
+        render();
+      });
+      document.addEventListener('keydown', onKeydown);
+    }
+
+    function onKeydown(e) {
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + total) % total;
+        render();
+      }
+      if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % total;
+        render();
+      }
+    }
+
+    function close() {
+      overlay.remove();
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKeydown);
+    }
+
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    render();
+  }
+
+  folderItems.forEach(folder => {
+    folder.addEventListener('click', () => {
+      const images = Array.from(folder.querySelectorAll('.folder-images img'));
+      if (images.length > 0) {
+        openCarousel(images, 0);
+      }
+    });
+  });
+
 });
