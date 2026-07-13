@@ -174,6 +174,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== INTERACTIVE EMOTE CAROUSEL =====
+  document.querySelectorAll('.emotes-interactive').forEach(carousel => {
+    carousel.addEventListener('click', (e) => {
+      const img = e.target.closest('img');
+      if (!img) return;
+
+      const allImages = Array.from(carousel.querySelectorAll('.emotes-track img'));
+      const seen = new Set();
+      const unique = [];
+      allImages.forEach(el => {
+        if (!seen.has(el.src)) {
+          seen.add(el.src);
+          unique.push(el);
+        }
+      });
+
+      const index = unique.findIndex(el => el.src === img.src);
+      if (index !== -1) {
+        openCarousel(unique, index);
+      }
+    });
+  });
+
   // ===== CONTACT FORM VALIDATION =====
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
