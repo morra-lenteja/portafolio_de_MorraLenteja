@@ -369,6 +369,18 @@ a { text-decoration: none; color: inherit; }
   z-index: 2;
 }
 
+/* ===== CLIENT LABEL ===== */
+.client-label {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--pink);
+  text-shadow: 0 0 15px rgba(233, 30, 140, 0.5);
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 /* ===== SECTION DIVIDER ===== */
 .section-divider {
   position: relative;
