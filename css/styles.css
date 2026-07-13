@@ -472,6 +472,22 @@ a { text-decoration: none; color: inherit; }
   background: rgba(123, 63, 160, 0.1);
 }
 
+.emotes-section {
+  padding: 80px 0;
+  background: var(--purple-dark);
+  border-bottom: 1px solid rgba(123, 63, 160, 0.1);
+}
+
+.emotes-section:nth-child(even) {
+  background: var(--dark);
+}
+
+.emotes-section .folder-grid {
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 /* ===== SOFTWARE SECTIONS ===== */
 .software {
   padding: 80px 0;
