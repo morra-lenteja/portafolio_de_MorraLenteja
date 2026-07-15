@@ -389,6 +389,10 @@ a { text-decoration: none; color: inherit; }
   align-items: flex-start;
 }
 
+.emote-gallery-layout + .emote-gallery-layout {
+  margin-top: 50px;
+}
+
 .emote-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

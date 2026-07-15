@@ -197,27 +197,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== EMOTE GRID + PREVIEW (Mejores Trabajos) =====
-  const emoteGrid = document.querySelector('.emote-grid');
-  const previewImg = document.querySelector('.emote-preview-image img');
-  const previewCaption = document.querySelector('.emote-preview-caption');
+  // ===== EMOTE GRID + PREVIEW =====
+  document.querySelectorAll('.emote-gallery-layout').forEach(layout => {
+    const grid = layout.querySelector('.emote-grid');
+    const previewImg = layout.querySelector('.emote-preview-image img');
+    const previewCaption = layout.querySelector('.emote-preview-caption');
 
-  if (emoteGrid && previewImg && previewCaption) {
-    const first = emoteGrid.querySelector('img');
+    if (!grid || !previewImg || !previewCaption) return;
+
+    const first = grid.querySelector('img');
     if (first) first.classList.add('active');
 
-    emoteGrid.addEventListener('click', (e) => {
+    grid.addEventListener('click', (e) => {
       const img = e.target.closest('img');
       if (!img) return;
 
-      emoteGrid.querySelectorAll('img').forEach(el => el.classList.remove('active'));
+      grid.querySelectorAll('img').forEach(el => el.classList.remove('active'));
       img.classList.add('active');
 
       previewImg.src = img.src;
       previewImg.alt = img.alt;
       previewCaption.textContent = img.getAttribute('data-caption') || '';
     });
-  }
+  });
 
   // ===== CONTACT FORM VALIDATION =====
   const contactForm = document.querySelector('.contact-form');
