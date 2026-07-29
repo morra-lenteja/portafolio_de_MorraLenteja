@@ -702,6 +702,10 @@ a { text-decoration: none; color: inherit; }
   gap: 15px;
 }
 
+#blender .works-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .work-item {
   position: relative;
   border-radius: 10px;
