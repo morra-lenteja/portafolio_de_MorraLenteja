@@ -1,0 +1,17 @@
+.contact-page{min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#493054 0%,#21172c 35%,#171322 70%)}
+.contact-nav{max-width:1450px;margin:auto;padding:28px 4%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.contact-brand{font-family:Outfit,sans-serif;font-size:22px;font-weight:700}.back-link{color:#d6c3e2;font-size:14px}.back-link:hover{color:var(--pink)}
+.contact-layout{max-width:1250px;margin:35px auto 80px;padding:0 24px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:26px;align-items:start}
+.contact-card{background:#211a30;border:1px solid #45334f;border-radius:28px;padding:34px;box-shadow:0 20px 60px #0e091a55}
+.artist-card .contact-avatar{display:block;width:112px;height:112px;object-fit:cover;border:3px solid #cfb0ff;border-radius:50%;margin-bottom:24px}
+.artist-card h1{font-size:27px;line-height:1.15}.artist-handle{font-size:13px;color:var(--muted);margin:7px 0 24px}.artist-card>p:not(.eyebrow):not(.artist-handle){color:#d3c6dc;font-size:14px;line-height:1.7}
+.contact-tags{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0}.contact-tags span{background:#352842;border:1px solid #51405d;border-radius:99px;padding:7px 11px;color:#e1cfea;font-size:12px}
+.contact-details{display:grid;gap:18px;border-top:1px solid var(--line);padding-top:25px;font-size:13px;color:#d6c7df;overflow-wrap:anywhere}.contact-details a:hover{color:var(--pink)}
+.form-card{padding:42px}.form-card h2{font-size:clamp(32px,4vw,48px);line-height:1.12;margin:15px 0 12px}.form-card h2 span{color:#d3b0ff}.form-intro{color:var(--muted);line-height:1.6;margin-bottom:30px}
+#contact-form{display:grid;gap:20px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}#contact-form label{display:grid;gap:9px;font-size:14px;font-weight:700}#contact-form input,#contact-form select,#contact-form textarea{width:100%;border:1px solid #51405d;border-radius:12px;background:#2c233a;color:#faf2ff;padding:14px;font:400 15px 'DM Sans',sans-serif}#contact-form textarea{resize:vertical;min-height:140px}#contact-form input::placeholder,#contact-form textarea::placeholder{color:#a998b4}#contact-form input:focus-visible,#contact-form select:focus-visible,#contact-form textarea:focus-visible{outline:2px solid #d7b7ff;outline-offset:2px}
+.form-action{display:flex;align-items:center;gap:20px}.form-action button{border:0;border-radius:99px;background:linear-gradient(100deg,#cda9ff,#f0a7d7);color:#271830;padding:15px 28px;font-weight:700;cursor:pointer;min-width:230px}.form-action button:hover{filter:brightness(1.08)}.form-action p{color:var(--muted);font-size:12px;line-height:1.5;margin:0}.fallback{color:var(--muted);font-size:13px;margin:25px 0 0}.fallback a{color:#efb0dd}
+@media(max-width:800px){.contact-layout{grid-template-columns:1fr;max-width:700px;margin-top:15px}.artist-card .contact-avatar{width:90px;height:90px}.contact-card,.form-card{padding:26px}.form-row{grid-template-columns:1fr}.form-action{align-items:stretch;flex-direction:column}}
+.form-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-action button:disabled{opacity:.65;cursor:wait}
+#form-status{margin:0;min-height:1.5em;color:#eac4ee;font-size:14px}
+#form-status[data-state="error"]{color:#ffadca}
